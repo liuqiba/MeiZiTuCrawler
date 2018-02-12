@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MeiZiTuCrawler", "MeiZiTuCrawler\MeiZiTuCrawler.pyproj", "{F420885A-31A5-4E04-894B-845E22A99299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F420885A-31A5-4E04-894B-845E22A99299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F420885A-31A5-4E04-894B-845E22A99299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9907F069-CCE8-402F-9CD5-B454C2F76F79}
+	EndGlobalSection
+EndGlobal
