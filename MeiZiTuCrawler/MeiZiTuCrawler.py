@@ -130,6 +130,9 @@ real_url = 'http://www.930mh.com'
 u = 'http://www.930mh.com/manhua/1532/'
 
 base_url = 'http://mhimg.acg.gd:22122/images/comic/102/{ccc}/'
+base_url2=' http://mhimg.acg.gd:22122/images/comic/116/{ccc}/'
+base_url3 = 'http://mhimg.acg.gd:22122/'               
+
 def find_all_chapters(url):
     _requests = requests.get(url)
     _content = _requests.text
@@ -137,6 +140,7 @@ def find_all_chapters(url):
     tag_li_list = _bs.find("ul",id='chapter-list-1').find_all('li')
     url_list=[]
     li_count=0
+    li_count2=0
     for tag in tag_li_list:
         try:
             file_name = tag.find("span",class_="list_con_zj").text.strip()
@@ -160,10 +164,17 @@ def find_all_chapters(url):
                 #for x in img_list:
                 #    print(x.text)
                 img_list =  re.compile(r"\"[0-9 a-z]{1,}\.jpg").findall(str(img_list_text))
-            
-                _murl = base_url.format(ccc = str(203305+li_count))
-                
+                _path=re.compile(r'chapterPath.*?\/\"').findall(str(img_list_text))
+                _path = re.compile(r'\".*?\"').findall(str(_path[0]))
+                pageCount = 203305+li_count
+                #if(pageCount>=203591):
+                #    pageCount = li_count2+230660
+                #    li_count2 +=1
+                #    _murl = base_url2.format(ccc = str(pageCount))
+                #else:
+                #    _murl = base_url.format(ccc = str(pageCount))
                 count = 0
+                _murl = base_url3+_path[0][1:-1]
                 for img_str in img_list:
                     #print(str(img_str)[1:])
                 
